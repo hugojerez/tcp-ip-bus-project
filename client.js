@@ -17,7 +17,7 @@ const uiReadLine = (title)=>{
 	});
 };
 
-const client = net.createConnection({port: 5000}, () => {
+const client = net.createConnection({port: 5001}, () => {
 	// 'connect' listener.
 	console.log('connected to server!');
 	client.write('01000lmenu');
