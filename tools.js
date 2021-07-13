@@ -33,7 +33,7 @@ const servicios = {
 
 		}
 		else {
-			result = 'NO EXISTE UUSARIO ';
+			result = 'NO EXISTE USUARIO ';
 			nextService = 'login';
 			title = 'INGRESE ROL RUT Y CLAVE';
 
