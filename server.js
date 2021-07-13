@@ -29,7 +29,7 @@ const server = net.createServer((socket) => {
 });
 
 // Grab an arbitrary unused port.
-server.listen(5001, () => {
+server.listen(5000, () => {
 	console.log('opened server on', server.address());
 });
 
