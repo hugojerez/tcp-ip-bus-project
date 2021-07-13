@@ -1,6 +1,9 @@
-let id = 0;
+let id = 1;
 let canEdit = true;
-const usuarios = [];
+const usuarios = [
+
+	{'id':1,'nombre':'JUAN','apellido':'PEREZ','rut':'99499','clave':'1234','rol':'5'}
+];
 const mascotas = [];
 const servicios= {
 	lmenu() {
@@ -18,6 +21,16 @@ const servicios= {
 	},
 	login(params) {
 		const [rol='', rut='', clave=''] = params.split(' ');
+
+		const resultados =	usuarios.find((user)=>( user.rol===rol&&user.rut===rut&&user.clave===clave ) );
+		if(resultados){
+			const result = `LOGEADO COMO ${rut} con rol ${rol}`;
+
+		}
+		else{
+			const result = 'NO EXISTE UUSARIO ';
+
+		}
 		canEdit = (rol === '5');
 		const title ='PRESIONE TECLA PARA AVANZAR';
 		const nextService ='pmenu';
@@ -74,7 +87,7 @@ const servicios= {
 	listm() {
 		const title ='PRESIONE TECLA PARA AVANZAR';
 		const nextService ='pmenu';
-		const result = '\nLISTADO DE MASCOTAS\n'+JSON.stringify(mascotas)+'\n';
+		const result = '\nLISTADO DE MASCOTAS\n'+JSON.stringify(mascotas,null,4)+'\n';
 
 		return {title, nextService, result};
 	},
@@ -82,7 +95,7 @@ const servicios= {
 	listp() {
 		const title ='PRESIONE TECLA PARA AVANZAR';
 		const nextService ='pmenu';
-		const result = '\nLISTADO DE USUARIOS\n'+JSON.stringify(usuarios)+'\n';
+		const result = '\nLISTADO DE USUARIOS\n'+JSON.stringify(usuarios,null,4)+'\n';
 
 		return {title, nextService, result};
 	},
