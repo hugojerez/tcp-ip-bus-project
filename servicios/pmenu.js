@@ -1,3 +1,7 @@
+
+const idObj = require('./id');
+
+
 module.exports= (param)=> {
 	let title = 'MENU';
 	let nextService = 'pmenu';
@@ -12,17 +16,17 @@ module.exports= (param)=> {
 	result += '\n' + ('||                 VERSION BETA                              ||');
 	result += '\n' + ('===============================================================');
 	result += '\n' + ('');
-	if (canEdit) {
+	if ( idObj. canEdit) {
 		result += '\n' + ('1- CREAR CLIENTE');
 		result += '\n' + ('2- CREAR MASCOTA');
 		result += '\n' + ('3- LISTAR CLIENTES');
 	}
 	result += '\n' + ('4- LISTAR MASCOTAS');
-	if (canEdit) {
+	if ( idObj. canEdit) {
 		result += '\n' + ('5- ASIGNAR CLIENTE-MASCOTA');
 	}
 	result += '\n' + ('6 - CONSULTAR FICHA GENERAL MASCOTA');
-	if (canEdit) {
+	if ( idObj. canEdit) {
 		result += '\n' + ('7 - INGRESAR INFO FICHA MASCOTA');
 		result += '\n' + ('8 - INGRESAR VACUNAS MASCOTA');
 	}

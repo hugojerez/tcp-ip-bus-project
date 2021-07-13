@@ -12,7 +12,7 @@ const server = net.createServer((socket) => {
 		const largoDeLaTransaccion = Number(decoder.write(value ).slice(0, 5));
 		const servicioInvocado = decoder.write(value ).slice(5, 10);
 		const contenido = decoder.write(value ).slice(10, largoDeLaTransaccion);
-
+		console.log(servicioInvocado);
 		const response = JSON.stringify( servicios[servicioInvocado]( contenido));
 		console.log(new Date());
 		console.log(largoDeLaTransaccion+servicioInvocado+contenido);

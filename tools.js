@@ -1,7 +1,7 @@
 
 
 const efich = require('./servicios/efich');
-const menup = require('./servicios/menup');
+const pmenu = require('./servicios/pmenu');
 const listm = require('./servicios/listm');
 const login = require('./servicios/login');
 const usuarios = require('./servicios/usuarios');
@@ -17,7 +17,7 @@ const lmenu = require('./servicios/lmenu');
 const servicios = {
 	efich,
 	listm,
-	menup,
+	pmenu,
 	login,
 	usuarios,
 	cream,
