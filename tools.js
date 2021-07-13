@@ -2,7 +2,7 @@ let id = 1;
 let canEdit = true;
 const usuarios = [
 
-	{ 'id': 1, 'nombre': 'JUAN', 'apellido': 'PEREZ', 'rut': '100', 'clave': '200', 'rol': '5' }
+	{ 'id': 1, 'nombre': 'JUAN', 'apellido': 'PEREZ', 'rut': '100-1', 'clave': '200', 'rol': '5' }
 ];
 const mascotas = [];
 const servicios = {
