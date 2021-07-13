@@ -10,7 +10,7 @@ const uiReadLine = (title)=>{
 		output: process.stdout,
 	});
 	return new Promise((resolve)=>{
-		rl.question((title||'Ingrese valores ')+ ' : ', (answer) => {
+		rl.question(' --> '+(title||'Ingrese valores ')+ ' : ', (answer) => {
 			rl.close();
 			resolve(answer);
 		});
@@ -27,7 +27,7 @@ client.on('data', async (data) => {
 	console.log(object.result);
 
 	client.write( '01000'+ object.nextService + await uiReadLine(object.title));
-	console.log('termino enviar');
+	console.log('OK');
 	// client.end();
 });
 client.on('end', () => {
